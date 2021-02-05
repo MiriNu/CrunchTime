@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            controller.Fire();
+        }
+
     }
 
     void FixedUpdate()

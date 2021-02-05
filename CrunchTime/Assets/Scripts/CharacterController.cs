@@ -9,11 +9,14 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private Transform m_CeilingCheck;                          // A position marking where to check for ceilings
     [SerializeField] private Collider m_CrouchDisableCollider;              // A collider that will be disabled when crouching
 
+    [SerializeField] private Transform firePoint;                               // Where firing starts
+    [SerializeField] private GameObject bomb;                                   // bomb Prefab
+
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
     const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
     private Rigidbody m_Rigidbody;
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+    public bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 velocity = Vector3.zero;
 
     private void Awake()
@@ -71,9 +74,14 @@ public class CharacterController : MonoBehaviour
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
 
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        transform.Rotate(0f, 180f, 0f);
+        firePoint.transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void Fire()
+    {
+        Instantiate(bomb, firePoint.position, firePoint.rotation);
+        Debug.Log("fire!");
+
     }
 }
