@@ -13,4 +13,15 @@ public class Bomb : MonoBehaviour
     {
         rb.velocity = transform.forward * speed;    
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Activatable" || other.tag == "Back")
+        {
+            Destroy(gameObject);
+        }
+        
+    }
+
+
 }
