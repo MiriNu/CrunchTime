@@ -563,6 +563,8 @@ GameObject:
   m_Component:
   - component: {fileID: 424317721}
   - component: {fileID: 424317720}
+  - component: {fileID: 424317722}
+  - component: {fileID: 424317723}
   m_Layer: 0
   m_Name: B2-1 (1)
   m_TagString: Untagged
@@ -634,6 +636,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &424317722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424317719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: e9866a26e24a04146853539f9e7f7519, type: 3}
+  spriteActive: {fileID: 21300000, guid: fa6b8999e2e997f4f887c32865be5ee8, type: 3}
+  spriteGlow: {fileID: 21300000, guid: 5ead19a71ae0ef94fa9e552032d5a9a8, type: 3}
+  signGlow: {fileID: 21300000, guid: 00ff63043332788449ddfab0b6421b73, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}
+--- !u!65 &424317723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424317719}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.29, y: 9.85, z: 0.2}
+  m_Center: {x: 1.145, y: 4.925, z: 0}
 --- !u!1 &467085142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b9f83450b5fac143b4f842abaf5ed82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTime: 4
+  maxTime: 7
+  strikes: 5
+  points: 0
 --- !u!4 &897260873
 Transform:
   m_ObjectHideFlags: 0
@@ -1281,7 +1320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.037193075, y: -0, z: -0, w: 0.99930817}
-  m_LocalPosition: {x: -0.31, y: 7.2, z: -14}
+  m_LocalPosition: {x: -0.5, y: 7.2, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1997348936}
@@ -1645,6 +1684,7 @@ GameObject:
   - component: {fileID: 1261256688}
   - component: {fileID: 1261256687}
   - component: {fileID: 1261256689}
+  - component: {fileID: 1261256690}
   m_Layer: 0
   m_Name: B3-2 (1)
   m_TagString: Activatable
@@ -1732,6 +1772,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.13, y: 10.72, z: 0.2}
   m_Center: {x: 2.565, y: 5.36, z: 0}
+--- !u!114 &1261256690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261256686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: e15cd047bb4838748a1d32ee20ce51e7, type: 3}
+  spriteActive: {fileID: 21300000, guid: bf049525f67d47c4b8a8064fd9ed67cb, type: 3}
+  spriteGlow: {fileID: 21300000, guid: 4ad693c9884984e43b2df46688c920c5, type: 3}
+  signGlow: {fileID: 21300000, guid: 16f0d64106b0179458bd8fe095603d17, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}
 --- !u!1 &1294746164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1802,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1294746166}
   - component: {fileID: 1294746165}
+  - component: {fileID: 1294746167}
+  - component: {fileID: 1294746168}
   m_Layer: 0
   m_Name: B2-1
   m_TagString: Untagged
@@ -1788,7 +1850,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9866a26e24a04146853539f9e7f7519, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a097256ad151bad4ca05a7a0170eec55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1807,12 +1869,45 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294746164}
   m_LocalRotation: {x: -0, y: -0, z: 0.031905957, w: 0.9994909}
-  m_LocalPosition: {x: 8.75, y: -0.6803999, z: -6.39}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: 10.51, y: -0.6803999, z: -4.94}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.657}
+--- !u!114 &1294746167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294746164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: a097256ad151bad4ca05a7a0170eec55, type: 3}
+  spriteActive: {fileID: 21300000, guid: 2847900676d3a414f884140fb26b6246, type: 3}
+  spriteGlow: {fileID: 21300000, guid: 6876a3f86a5cd3d41b422906a23407cb, type: 3}
+  signGlow: {fileID: 21300000, guid: 00ff63043332788449ddfab0b6421b73, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}
+--- !u!65 &1294746168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294746164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.019999, y: 74.07, z: 0.2}
+  m_Center: {x: -0.000000052414833, y: 7.034999, z: 0}
 --- !u!1 &1307684198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2257,7 @@ GameObject:
   - component: {fileID: 1479649937}
   - component: {fileID: 1479649936}
   - component: {fileID: 1479649938}
+  - component: {fileID: 1479649939}
   m_Layer: 0
   m_Name: B4-2 (1)
   m_TagString: Activatable
@@ -2247,6 +2343,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.498273, y: 12.35, z: 0.2}
   m_Center: {x: 2.7491364, y: 6.175, z: 0}
+--- !u!114 &1479649939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479649935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: 4ea5c0731b9a04f48a0d8e202aa02c22, type: 3}
+  spriteActive: {fileID: 21300000, guid: 3087043e2a5e9964ba6c8b0b4924f54e, type: 3}
+  spriteGlow: {fileID: 21300000, guid: e4bf7392c8a59cf4ea688e652f97a381, type: 3}
+  signGlow: {fileID: 21300000, guid: 16f0d64106b0179458bd8fe095603d17, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}
 --- !u!1 &1512619531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,6 +2455,7 @@ GameObject:
   - component: {fileID: 1521536255}
   - component: {fileID: 1521536254}
   - component: {fileID: 1521536256}
+  - component: {fileID: 1521536257}
   m_Layer: 0
   m_Name: BRIDGE-34
   m_TagString: Activatable
@@ -2404,7 +2521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521536253}
   m_LocalRotation: {x: -0.20845911, y: -0.97337145, z: 0.019968996, w: 0.09324233}
-  m_LocalPosition: {x: 10.35, y: 0.08661413, z: -4.15}
+  m_LocalPosition: {x: 10.04, y: 0.08661413, z: -4.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2423,6 +2540,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.67, y: 4.5, z: 0.2000001}
   m_Center: {x: -0.00000008405186, y: 4.75, z: -0.000000035390258}
+--- !u!114 &1521536257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521536253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: 159fbad84865edb42bc4ee46536d13e3, type: 3}
+  spriteActive: {fileID: 21300000, guid: 159fbad84865edb42bc4ee46536d13e3, type: 3}
+  spriteGlow: {fileID: 21300000, guid: c4a7c793965319c40853165191025fd2, type: 3}
+  signGlow: {fileID: 0}
+  signOff: {fileID: 0}
+  signOn: {fileID: 0}
+  timerLength: 3
+  AM: {fileID: 0}
 --- !u!1 &1531062653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,6 +2571,7 @@ GameObject:
   - component: {fileID: 1531062655}
   - component: {fileID: 1531062654}
   - component: {fileID: 1531062656}
+  - component: {fileID: 1531062657}
   m_Layer: 0
   m_Name: B5-1
   m_TagString: Activatable
@@ -2519,6 +2657,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.36, y: 8.118289, z: 0.2}
   m_Center: {x: 2.18, y: 4.0591445, z: 0}
+--- !u!114 &1531062657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531062653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: 7a5e4e39588858440b7377e5602f67d9, type: 3}
+  spriteActive: {fileID: 21300000, guid: daf61467ecb9be046b6fae04577afa75, type: 3}
+  spriteGlow: {fileID: 21300000, guid: 46e1bb94b9c888a46925044cefbb5901, type: 3}
+  signGlow: {fileID: 21300000, guid: 16f0d64106b0179458bd8fe095603d17, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}
 --- !u!1 &1570814996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,7 +2891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690462902}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.7666674, y: 6.9111114, z: -2.1799998}
+  m_LocalPosition: {x: 7.96, y: 5.98, z: -2.1799998}
   m_LocalScale: {x: 1.6666669, y: 1.6666669, z: 1}
   m_Children: []
   m_Father: {fileID: 1479649937}
@@ -2800,6 +2958,7 @@ GameObject:
   - component: {fileID: 1693405799}
   - component: {fileID: 1693405798}
   - component: {fileID: 1693405800}
+  - component: {fileID: 1693405801}
   m_Layer: 0
   m_Name: B3-2 (2)
   m_TagString: Activatable
@@ -2885,6 +3044,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.13, y: 10.719999, z: 0.2}
   m_Center: {x: 2.5649998, y: 5.3599997, z: 0}
+--- !u!114 &1693405801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693405797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: e15cd047bb4838748a1d32ee20ce51e7, type: 3}
+  spriteActive: {fileID: 21300000, guid: a83e744dbda5b7a43b767fba25e9006d, type: 3}
+  spriteGlow: {fileID: 21300000, guid: 4ad693c9884984e43b2df46688c920c5, type: 3}
+  signGlow: {fileID: 21300000, guid: 16f0d64106b0179458bd8fe095603d17, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}
 --- !u!1 &1706594309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,7 +3089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706594309}
   m_LocalRotation: {x: -0, y: 0.29924592, z: -0, w: 0.954176}
-  m_LocalPosition: {x: 2.14, y: 6.93, z: -2.8700001}
+  m_LocalPosition: {x: 1.78, y: 6.93, z: -2.8700001}
   m_LocalScale: {x: 1.5, y: 1.5000005, z: 1}
   m_Children: []
   m_Father: {fileID: 1531062655}
@@ -2991,7 +3170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885558030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.27, y: 4.51, z: -0.21}
+  m_LocalPosition: {x: 2.27, y: 4.51, z: -0.88}
   m_LocalScale: {x: 5, y: 1.2500004, z: 1}
   m_Children: []
   m_Father: {fileID: 1693405799}
@@ -3344,6 +3523,7 @@ GameObject:
   - component: {fileID: 2058529993}
   - component: {fileID: 2058529992}
   - component: {fileID: 2058529994}
+  - component: {fileID: 2058529995}
   m_Layer: 0
   m_Name: B3-2 (3)
   m_TagString: Activatable
@@ -3409,7 +3589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058529991}
   m_LocalRotation: {x: -0, y: -0, z: 0.02699737, w: 0.9996355}
-  m_LocalPosition: {x: 7.53, y: -1.0952826, z: -3.62}
+  m_LocalPosition: {x: 6.78, y: -1.0952826, z: -3.62}
   m_LocalScale: {x: 0.3, y: 0.8, z: 1}
   m_Children:
   - {fileID: 278687398}
@@ -3429,3 +3609,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.1299996, y: 10.720001, z: 0.2}
   m_Center: {x: 2.5649998, y: 5.3600006, z: 0}
+--- !u!114 &2058529995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058529991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a254d27b2defb643bdbe5e47fd3f024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShutDown: {fileID: 21300000, guid: e15cd047bb4838748a1d32ee20ce51e7, type: 3}
+  spriteActive: {fileID: 21300000, guid: 8c4fd7253a69333478e5b038504d5b60, type: 3}
+  spriteGlow: {fileID: 21300000, guid: 4ad693c9884984e43b2df46688c920c5, type: 3}
+  signGlow: {fileID: 21300000, guid: 16f0d64106b0179458bd8fe095603d17, type: 3}
+  signOff: {fileID: 21300000, guid: 702db04952bb50e47af6ac12b6c40489, type: 3}
+  signOn: {fileID: 21300000, guid: 01a9371a3efa47e4b9107f1b2d62ed09, type: 3}
+  timerLength: 3
+  AM: {fileID: 0}

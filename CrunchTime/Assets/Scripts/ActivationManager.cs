@@ -5,9 +5,12 @@ using UnityEngine;
 public class ActivationManager : MonoBehaviour
 {
     GameObject[] activatables;
-    float minTime = 4f;
-    float maxTime = 7f;
+    public float minTime = 4f;
+    public float maxTime = 7f;
     int randomActivatable;
+    float glowTimer = 2f;
+    public int strikes = 5;
+    public int points = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +21,12 @@ public class ActivationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (strikes == 0 )
+        {
+            // Game over
+        }
 
-    void ShutDown(GameObject activatable)
-    {
-        activatable.GetComponent<SpriteRenderer>();
-    }
-
-    void AskActivation(GameObject activatable)
-    {
-        activatable.GetComponent<SpriteRenderer>();
+   
     }
 
     void RequestActivation()
@@ -38,8 +36,12 @@ public class ActivationManager : MonoBehaviour
         // Choose building/train/drone
         randomActivatable = Random.Range(0, activatables.Length-1);
         // Prepare for activation request
-        ShutDown(activatables[randomActivatable]);
-        AskActivation(activatables[randomActivatable]);
+        Activatable activatable = activatables[randomActivatable].GetComponent<Activatable>();
+        if (!activatable.isGlow())
+        {
+            activatable.Glow(glowTimer);
+        }
+
         Invoke("RequestActivation", randomTime);
 
     }
