@@ -11,12 +11,21 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalMove = 0f;
 
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
     {
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        if (horizontalMove == 0)
+        {
+            animator.SetBool("isMove", true);
+        }
+        else
+        {
+            animator.SetBool("isMove", false);
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
