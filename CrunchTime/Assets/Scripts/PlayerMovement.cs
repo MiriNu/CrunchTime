@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             controller.Fire();
-            runSpeed /= 1.01f;
+            runSpeed /= 1.1f;
         }
 
     }

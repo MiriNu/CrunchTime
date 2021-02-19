@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ActivationManager : MonoBehaviour
 {
     GameObject[] activatables;
@@ -24,6 +24,7 @@ public class ActivationManager : MonoBehaviour
         if (strikes == 0 )
         {
             // Game over
+            SceneManager.LoadScene("GameOver");
         }
 
    

@@ -25,6 +25,11 @@ public class Bomb : MonoBehaviour
         if (other.tag == "Activatable" || other.tag == "Back")
         {
             Destroy(gameObject);
+
+            if (other.tag == "Back")
+            {
+                AM.strikes--;
+            }
         }
         
     }
